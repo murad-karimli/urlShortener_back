@@ -30,7 +30,7 @@ app.get('/api/v1/',async (req,res)=>{
     res.send('good')
     // res.send({shortUrl:urls})
   } )
-
+console.log("test")
 app.get('/api/v1/:shortUrl',async(req,res)=>{
   const shortcode=await Url.findOne({shortcode:req.params.shortUrl})
   if(shortcode==null) return res.status(404)
